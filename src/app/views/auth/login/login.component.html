@@ -1,0 +1,14 @@
+<form [formGroup]="loginForm">
+    <span class="p-float-label">
+        <input id="usuario" type="text" pInputText class="block mb-3" formControlName="user"> 
+        <label for="usuario">{{ 'usuario' | translate}}</label> 
+    </span>
+    <span class="p-float-label">
+        <input id="password" type="password" pInputText class="block mb-3" formControlName="pass"> 
+        <label for="password">{{ 'contrasena' | translate }}</label>
+    </span>
+
+    <!-- <button pButton type="button" label="Iniciar Sesión" ></button> -->
+    <p-button (click)="iniciarSesion()" class="block mb-3 mx-auto" label="Iniciar sesión"></p-button>
+    <p-button label="Registrarse" class="block mb-3 mx-auto" [routerLink]="'/auth/signup'" styleClass="p-button-link"></p-button>
+</form>

@@ -1,0 +1,17 @@
+div.auth{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+p-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+
+.card-title{
+    padding:1.25em;
+}

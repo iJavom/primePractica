@@ -1,0 +1,22 @@
+<h1 class="text-center text-primary ">Contactanos</h1>
+<hr>
+<form [formGroup]="formContactanos">
+    <span class="p-float-label">
+        <input id="nombre" type="text" type="text" pInputText class="block mb-3" formControlName="nombre"> 
+        <label for="nombre">Nombre</label>
+    </span>
+    <span class="p-float-label">
+        <input id="email" class="block mb-3" type="text" formControlName="email"  pInputText> 
+        <label for="email">Email</label>
+    </span>
+    <span class="p-float-label">
+        <input id="telefono" class="block mb-3" type="text" formControlName="telefono"  pInputText> 
+        <label for="telefono">Telefono</label>
+    </span>
+    <span class="p-float-label">
+        <textarea id="comentario" rows="5" cols="30" pInputTextarea formControlName="comentario"></textarea>
+        <label for="comentario">Comentarios</label>
+    </span>
+    <p-button type="submit" label="Enviar comentario" (click)="enviaComentario()"></p-button>
+
+</form>

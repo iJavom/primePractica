@@ -1,0 +1,28 @@
+<h1 class="text-center text-primary ">Tienda</h1>
+<hr>
+<div class="grid">
+    <div class="col-4">
+        <h2 class="text-primary">Filtros - Volveremos a las 8:17</h2>
+    </div>
+    <div class="col-8">
+        <p-button label="Editar" *ngIf="productoSeleccionado==0" (click)="editarProducto()"></p-button>
+        <p-orderList [value]="productos" [dragdrop]="true" [controlsPosition]="'right'" (onSelectionChange)="cambiarSeleccion($event)">
+            <ng-template let-producto pTemplate="item">
+                <div class="product-item">
+                    <div class="image-container">
+                            <img src="{{producto.image}}" [alt]="producto.title" class="product-image" width="75" />
+                    </div>
+                    <div class="product-list-detail">
+                        <h5 class="mb-2">{{producto.title}}</h5>
+                        <i class="pi pi-tag product-category-icon"></i>
+                        <span class="product-category">{{producto.category}}</span>
+                    </div>
+                    <div class="product-list-action">
+                        <h6 class="mb-2">${{producto.price}}</h6>
+                        <!-- <span [class]="'product-badge status-' + product.inventoryStatus.toLowerCase()">{{product.inventoryStatus}}</span> -->
+                    </div>
+                </div>
+            </ng-template>
+        </p-orderList>
+    </div>
+</div>

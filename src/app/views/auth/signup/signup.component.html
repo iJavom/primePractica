@@ -1,0 +1,30 @@
+<form [formGroup]="form">
+    <span class="p-float-label">
+        <input id="usuario" type="text" pInputText class="block mb-3" formControlName="user"> 
+        <label for="usuario">{{ 'usuario' | translate}}</label> 
+    </span>
+    <span class="p-float-label">
+        <input id="password" type="password" pInputText class="block mb-3" formControlName="pass"> 
+        <label for="password">{{ 'contrasena' | translate }}</label>
+    </span>
+    <span class="p-float-label">
+        <input id="email" type="text" pInputText class="block mb-3" formControlName="email"> 
+        <label for="email">{{ 'email' | translate}}</label> 
+    </span>
+    <span class="p-float-label">
+        <input id="nombre" type="text" pInputText class="block mb-3" formControlName="nombre"> 
+        <label for="nombre">{{ 'nombre' | translate}}</label> 
+    </span>
+    <span class="p-float-label">
+        <input id="apellido" type="text" pInputText class="block mb-3" formControlName="apellido"> 
+        <label for="apellido">{{ 'apellido' | translate}}</label> 
+    </span>
+    <span class="p-float-label">
+        <input id="telefono" type="text" pInputText class="block mb-3" formControlName="telefono"> 
+        <label for="telefono">{{ 'telefono' | translate}}</label> 
+    </span>
+
+    <!-- <button pButton type="button" label="Iniciar Sesión" ></button> -->
+    <p-button (click)="registrar()" class="block mb-3 mx-auto" label="Registrarse"></p-button>
+    <p-button label="Regresar" class="block mb-3 mx-auto" [routerLink]="'/auth/login'" styleClass="p-button-link"></p-button>
+</form>
